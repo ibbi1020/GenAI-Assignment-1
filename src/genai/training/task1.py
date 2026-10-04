@@ -26,24 +26,24 @@ from genai.data.pet_dataset import (
     tensor_to_pil,
 )
 from genai.data.pets import assert_disjoint
-from genai.models.universal_autoencoder import UniversalAutoencoder
+from genai.models.denoising_autoencoder import DenoisingAutoencoder
 from genai.training.losses import per_image_scores, reconstruction_loss, validation_objective
 
 SEARCH_SPACE = {
     "lr": "log uniform from 1e-4 to 2e-3",
     "batch_size": [16, 32, 64],
-    "bottleneck_dim": [64, 128, 256, 512],
-    "base_channels": [16, 32, 64],
-    "dropout": "uniform from 0.0 to 0.3",
+    "bottleneck_dimension": [16, 32, 64],
+    "encoder_channels": [64, 128, 256],
+    "norm": ["group", "batch"],
     "alpha": "uniform from 0.5 to 0.95",
 }
 BASELINE_PARAMS = {
-    "lr": 1e-3,
+    "lr": 5e-4,
     "batch_size": 32,
-    "bottleneck_dim": 256,
-    "base_channels": 32,
-    "dropout": 0.1,
-    "alpha": 0.8,
+    "bottleneck_dimension": 32,
+    "encoder_channels": 256,
+    "norm": "group",
+    "alpha": 0.5,
 }
 
 
@@ -61,11 +61,11 @@ def seed_everything(seed: int) -> None:
     torch.manual_seed(seed)
 
 
-def build_model(params: dict) -> UniversalAutoencoder:
-    return UniversalAutoencoder(
-        base_channels=int(params["base_channels"]),
-        bottleneck_dim=int(params["bottleneck_dim"]),
-        dropout=float(params["dropout"]),
+def build_model(params: dict) -> DenoisingAutoencoder:
+    return DenoisingAutoencoder(
+        encoder_channels=int(params["encoder_channels"]),
+        bottleneck_dimension=int(params["bottleneck_dimension"]),
+        norm=str(params["norm"]),
     )
 
 
@@ -124,7 +124,7 @@ def make_loaders(
 
 
 def train_epochs(
-    model: UniversalAutoencoder,
+    model: DenoisingAutoencoder,
     loaders: dict[str, DataLoader],
     params: dict,
     device: torch.device,
@@ -133,6 +133,7 @@ def train_epochs(
     patience: int | None = None,
     trial: optuna.Trial | None = None,
     mlflow_active: bool = True,
+    min_delta: float = 1e-4,
 ) -> dict:
     """Train and return the best validation score seen in this run."""
     model.to(device)
@@ -173,7 +174,7 @@ def train_epochs(
             trial.report(score, epoch)
             if trial.should_prune():
                 raise optuna.TrialPruned()
-        if score < best_score - 1e-4:
+        if score < best_score - min_delta:
             best_score = score
             best_state = copy.deepcopy(model.state_dict())
             epochs_without_improvement = 0
@@ -190,7 +191,7 @@ def train_epochs(
     return {"best_objective": best_score, "history": history}
 
 
-def collect_records(model: UniversalAutoencoder, loader: DataLoader, device: torch.device) -> list[dict]:
+def collect_records(model: DenoisingAutoencoder, loader: DataLoader, device: torch.device) -> list[dict]:
     model.eval()
     records = []
     with torch.no_grad():
@@ -271,7 +272,7 @@ def select_failures(records: list[dict]) -> list[dict]:
 
 def save_example_grid(
     path: Path,
-    model: UniversalAutoencoder,
+    model: DenoisingAutoencoder,
     chosen: list[dict],
     manifest_rows: list[dict],
     image_dir: Path,
@@ -325,7 +326,7 @@ def save_example_grid(
     plt.close(figure)
 
 
-def export_onnx(model: UniversalAutoencoder, params: dict, onnx_path: Path, sample: torch.Tensor) -> float:
+def export_onnx(model: DenoisingAutoencoder, params: dict, onnx_path: Path, sample: torch.Tensor) -> float:
     onnx_path.parent.mkdir(parents=True, exist_ok=True)
     export_model = build_model(params)
     export_model.load_state_dict(model.state_dict())
@@ -394,9 +395,9 @@ def run_optuna(
         params = {
             "lr": trial.suggest_float("lr", 1e-4, 2e-3, log=True),
             "batch_size": trial.suggest_categorical("batch_size", [16, 32, 64]),
-            "bottleneck_dim": trial.suggest_categorical("bottleneck_dim", [64, 128, 256, 512]),
-            "base_channels": trial.suggest_categorical("base_channels", [16, 32, 64]),
-            "dropout": trial.suggest_float("dropout", 0.0, 0.3),
+            "bottleneck_dimension": trial.suggest_categorical("bottleneck_dimension", [16, 32, 64]),
+            "encoder_channels": trial.suggest_categorical("encoder_channels", [64, 128, 256]),
+            "norm": trial.suggest_categorical("norm", ["group", "batch"]),
             "alpha": trial.suggest_float("alpha", 0.5, 0.95),
         }
         seed_everything(42 + trial.number)

@@ -1,0 +1,5 @@
+true\pred,clean,salt_and_pepper,gaussian_blur,rectangular_occlusion
+clean,3565,0,90,14
+salt_and_pepper,10,10997,0,0
+gaussian_blur,8,0,10999,0
+rectangular_occlusion,689,0,10,10308

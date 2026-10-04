@@ -1,0 +1,12 @@
+corruption,severity,count,l1,ssim,psnr
+clean,,3669,0.000000,0.999998,80.0000
+salt_and_pepper,low,3669,0.029256,0.875122,27.9161
+salt_and_pepper,medium,3669,0.031952,0.848762,27.1808
+salt_and_pepper,high,3669,0.036462,0.803053,26.0803
+gaussian_blur,low,3669,0.028700,0.897499,28.2984
+gaussian_blur,medium,3669,0.030322,0.864529,27.6611
+gaussian_blur,high,3669,0.040226,0.745543,24.9076
+rectangular_occlusion,low,3669,0.039284,0.867720,24.1784
+rectangular_occlusion,medium,3669,0.049036,0.808581,21.9098
+rectangular_occlusion,high,3669,0.066439,0.718214,19.5504
+all,,36690,0.035168,0.842902,30.7683

@@ -1,0 +1,80 @@
+[
+  {
+    "number": 0,
+    "state": "COMPLETE",
+    "value": 0.3160754932535159,
+    "params": {
+      "lr": 0.0005,
+      "batch_size": 32,
+      "bottleneck_dimension": 32,
+      "encoder_channels": 64,
+      "norm": "group",
+      "alpha": 0.5
+    }
+  },
+  {
+    "number": 1,
+    "state": "COMPLETE",
+    "value": 0.3840046473891885,
+    "params": {
+      "lr": 0.0003071057367777374,
+      "batch_size": 16,
+      "bottleneck_dimension": 16,
+      "encoder_channels": 32,
+      "norm": "batch",
+      "alpha": 0.8745991883601898
+    }
+  },
+  {
+    "number": 2,
+    "state": "COMPLETE",
+    "value": 0.499163778079319,
+    "params": {
+      "lr": 0.00018891200276189413,
+      "batch_size": 64,
+      "bottleneck_dimension": 16,
+      "encoder_channels": 32,
+      "norm": "batch",
+      "alpha": 0.8533291826268561
+    }
+  },
+  {
+    "number": 3,
+    "state": "COMPLETE",
+    "value": 0.4769848524318718,
+    "params": {
+      "lr": 0.00018187859051288225,
+      "batch_size": 32,
+      "bottleneck_dimension": 16,
+      "encoder_channels": 64,
+      "norm": "group",
+      "alpha": 0.8079048619304706
+    }
+  },
+  {
+    "number": 4,
+    "state": "COMPLETE",
+    "value": 0.41292880209875965,
+    "params": {
+      "lr": 0.0003738105868191798,
+      "batch_size": 32,
+      "bottleneck_dimension": 16,
+      "encoder_channels": 128,
+      "norm": "batch",
+      "alpha": 0.8488097705125015
+    }
+  },
+  {
+    "number": 5,
+    "state": "RUNNING",
+    "value": null,
+    "params": {
+      "lr": 0.0016684619386293468,
+      "batch_size": 64,
+      "bottleneck_dimension": 32,
+      "encoder_channels": 64,
+      "norm": "group",
+      "alpha": 0.6264205293593214
+    }
+  }
+]

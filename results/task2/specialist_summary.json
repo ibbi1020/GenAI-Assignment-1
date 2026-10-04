@@ -1,0 +1,96 @@
+{
+  "device": "mps",
+  "search_space": {
+    "lr": "log uniform from 1e-4 to 2e-3",
+    "batch_size": [
+      16,
+      32,
+      64
+    ],
+    "bottleneck_dimension": [
+      16,
+      32,
+      64
+    ],
+    "encoder_channels": [
+      32,
+      64,
+      128
+    ],
+    "norm": [
+      "group",
+      "batch"
+    ],
+    "alpha": "uniform from 0.5 to 0.95"
+  },
+  "baseline_enqueued": {
+    "lr": 0.0005,
+    "batch_size": 32,
+    "bottleneck_dimension": 32,
+    "encoder_channels": 64,
+    "norm": "group",
+    "alpha": 0.5
+  },
+  "best_trial": 0,
+  "best_trial_mean_objective": 0.3160754932535159,
+  "selected_params": {
+    "lr": 0.0005,
+    "batch_size": 32,
+    "bottleneck_dimension": 32,
+    "encoder_channels": 64,
+    "norm": "group",
+    "alpha": 0.5
+  },
+  "specialists": {
+    "salt_and_pepper": {
+      "params": {
+        "lr": 0.0005,
+        "batch_size": 32,
+        "bottleneck_dimension": 32,
+        "encoder_channels": 64,
+        "norm": "group",
+        "alpha": 0.5,
+        "train_seed": 100
+      },
+      "best_objective": 0.1892034562938299,
+      "checkpoint": "/Users/ibraheenfarooq/Uni/GenAI/Ass1/outputs/task2/specialist_salt_and_pepper.pt",
+      "onnx": "/Users/ibraheenfarooq/Uni/GenAI/Ass1/outputs/task2/specialist_salt_and_pepper.onnx",
+      "onnx_max_abs_diff": 8.940696716308594e-07
+    },
+    "gaussian_blur": {
+      "params": {
+        "lr": 0.0005,
+        "batch_size": 32,
+        "bottleneck_dimension": 32,
+        "encoder_channels": 64,
+        "norm": "group",
+        "alpha": 0.5,
+        "train_seed": 101
+      },
+      "best_objective": 0.16737942383266416,
+      "checkpoint": "/Users/ibraheenfarooq/Uni/GenAI/Ass1/outputs/task2/specialist_gaussian_blur.pt",
+      "onnx": "/Users/ibraheenfarooq/Uni/GenAI/Ass1/outputs/task2/specialist_gaussian_blur.onnx",
+      "onnx_max_abs_diff": 5.960464477539062e-07
+    },
+    "rectangular_occlusion": {
+      "params": {
+        "lr": 0.0005,
+        "batch_size": 32,
+        "bottleneck_dimension": 32,
+        "encoder_channels": 64,
+        "norm": "group",
+        "alpha": 0.5,
+        "train_seed": 102
+      },
+      "best_objective": 0.25462465725011296,
+      "checkpoint": "/Users/ibraheenfarooq/Uni/GenAI/Ass1/outputs/task2/specialist_rectangular_occlusion.pt",
+      "onnx": "/Users/ibraheenfarooq/Uni/GenAI/Ass1/outputs/task2/specialist_rectangular_occlusion.onnx",
+      "onnx_max_abs_diff": 6.109476089477539e-06
+    }
+  },
+  "onnx_max_abs_diff": {
+    "salt_and_pepper": 8.940696716308594e-07,
+    "gaussian_blur": 5.960464477539062e-07,
+    "rectangular_occlusion": 6.109476089477539e-06
+  }
+}

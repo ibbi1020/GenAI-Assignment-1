@@ -1,0 +1,238 @@
+{
+  "split_scored": "test",
+  "selected_params": {
+    "lr": 0.003,
+    "batch_size": 64,
+    "temperature": 5.0,
+    "lambda_l1": 0.8,
+    "lambda_ssim": 0.1,
+    "lambda_cls": 0.01,
+    "lambda_balance": 0.01,
+    "epochs": 8,
+    "patience": 4,
+    "min_delta": 0.001,
+    "warmup_epochs": 2,
+    "warmup_lr": 0.001,
+    "finetune_lr": 0.0001,
+    "train_seed": 42
+  },
+  "validation_objective": 0.13318347283031626,
+  "gate_weights": [
+    {
+      "corruption": "clean",
+      "severity": null,
+      "count": 3669,
+      "weights": {
+        "clean": 0.8680060413196727,
+        "salt_and_pepper": 0.00193581823088848,
+        "gaussian_blur": 0.08302449198961127,
+        "rectangular_occlusion": 0.04703364862521522
+      }
+    },
+    {
+      "corruption": "salt_and_pepper",
+      "severity": "low",
+      "count": 3669,
+      "weights": {
+        "clean": 0.06141018523277016,
+        "salt_and_pepper": 0.9320559364779829,
+        "gaussian_blur": 6.717715890370085e-07,
+        "rectangular_occlusion": 0.0065332067562480405
+      }
+    },
+    {
+      "corruption": "salt_and_pepper",
+      "severity": "medium",
+      "count": 3669,
+      "weights": {
+        "clean": 0.010097520689732145,
+        "salt_and_pepper": 0.988495944013515,
+        "gaussian_blur": 1.919656127321864e-05,
+        "rectangular_occlusion": 0.00138733857359319
+      }
+    },
+    {
+      "corruption": "salt_and_pepper",
+      "severity": "high",
+      "count": 3669,
+      "weights": {
+        "clean": 0.006167555121748659,
+        "salt_and_pepper": 0.9927564973271032,
+        "gaussian_blur": 5.4230832487388975e-05,
+        "rectangular_occlusion": 0.0010217167374143203
+      }
+    },
+    {
+      "corruption": "gaussian_blur",
+      "severity": "low",
+      "count": 3669,
+      "weights": {
+        "clean": 0.2921596534548159,
+        "salt_and_pepper": 0.00016439784599484248,
+        "gaussian_blur": 0.6918313930688883,
+        "rectangular_occlusion": 0.015844555239531505
+      }
+    },
+    {
+      "corruption": "gaussian_blur",
+      "severity": "medium",
+      "count": 3669,
+      "weights": {
+        "clean": 0.2551932017950701,
+        "salt_and_pepper": 0.00012041810614066848,
+        "gaussian_blur": 0.7324593533576753,
+        "rectangular_occlusion": 0.012227026234706064
+      }
+    },
+    {
+      "corruption": "gaussian_blur",
+      "severity": "high",
+      "count": 3669,
+      "weights": {
+        "clean": 0.2638658250944268,
+        "salt_and_pepper": 0.00014415927064210675,
+        "gaussian_blur": 0.7229115744967914,
+        "rectangular_occlusion": 0.01307844037609416
+      }
+    },
+    {
+      "corruption": "rectangular_occlusion",
+      "severity": "low",
+      "count": 3669,
+      "weights": {
+        "clean": 0.33880717159324025,
+        "salt_and_pepper": 0.007551265504364536,
+        "gaussian_blur": 0.024306226422392482,
+        "rectangular_occlusion": 0.6293353361536288
+      }
+    },
+    {
+      "corruption": "rectangular_occlusion",
+      "severity": "medium",
+      "count": 3669,
+      "weights": {
+        "clean": 0.056523023740556615,
+        "salt_and_pepper": 0.0042186826583921425,
+        "gaussian_blur": 0.004277179663687081,
+        "rectangular_occlusion": 0.9349811128940982
+      }
+    },
+    {
+      "corruption": "rectangular_occlusion",
+      "severity": "high",
+      "count": 3669,
+      "weights": {
+        "clean": 0.0048942087008385935,
+        "salt_and_pepper": 0.0010104808485271609,
+        "gaussian_blur": 0.0007800799532665082,
+        "rectangular_occlusion": 0.9933152302762539
+      }
+    }
+  ],
+  "reconstruction": [
+    {
+      "corruption": "clean",
+      "severity": null,
+      "count": 3669,
+      "l1": 0.00293606454757655,
+      "ssim": 0.994850249316784,
+      "psnr": 50.72201148792391
+    },
+    {
+      "corruption": "salt_and_pepper",
+      "severity": "low",
+      "count": 3669,
+      "l1": 0.023103188518226618,
+      "ssim": 0.9023520806629153,
+      "psnr": 29.458735771938187
+    },
+    {
+      "corruption": "salt_and_pepper",
+      "severity": "medium",
+      "count": 3669,
+      "l1": 0.02637128643823534,
+      "ssim": 0.8768593191970561,
+      "psnr": 28.50463450003723
+    },
+    {
+      "corruption": "salt_and_pepper",
+      "severity": "high",
+      "count": 3669,
+      "l1": 0.03085714033542114,
+      "ssim": 0.834693755610303,
+      "psnr": 27.206422557295358
+    },
+    {
+      "corruption": "gaussian_blur",
+      "severity": "low",
+      "count": 3669,
+      "l1": 0.02026483364102199,
+      "ssim": 0.9310387291093392,
+      "psnr": 30.984226160785035
+    },
+    {
+      "corruption": "gaussian_blur",
+      "severity": "medium",
+      "count": 3669,
+      "l1": 0.026358258524393312,
+      "ssim": 0.8743863169781094,
+      "psnr": 28.549188801559318
+    },
+    {
+      "corruption": "gaussian_blur",
+      "severity": "high",
+      "count": 3669,
+      "l1": 0.03708555053921585,
+      "ssim": 0.7543830268956166,
+      "psnr": 25.308314743208346
+    },
+    {
+      "corruption": "rectangular_occlusion",
+      "severity": "low",
+      "count": 3669,
+      "l1": 0.027639413790350374,
+      "ssim": 0.8979488211663876,
+      "psnr": 23.964110510652738
+    },
+    {
+      "corruption": "rectangular_occlusion",
+      "severity": "medium",
+      "count": 3669,
+      "l1": 0.039007003999369266,
+      "ssim": 0.8272839984603979,
+      "psnr": 22.488307248217172
+    },
+    {
+      "corruption": "rectangular_occlusion",
+      "severity": "high",
+      "count": 3669,
+      "l1": 0.056942178367447485,
+      "ssim": 0.7317241703612696,
+      "psnr": 19.902920594817125
+    },
+    {
+      "corruption": "all",
+      "severity": null,
+      "count": 36690,
+      "l1": 0.02905649187012579,
+      "ssim": 0.8625520467758179,
+      "psnr": 28.70888723764344
+    }
+  ],
+  "expert_activity": {
+    "mean_weights": {
+      "clean": 0.21571243867428722,
+      "salt_and_pepper": 0.29284536002835515,
+      "gaussian_blur": 0.22596643981176623,
+      "rectangular_occlusion": 0.2654757611866783
+    },
+    "inactive": [],
+    "takes_foreign_inputs": []
+  },
+  "onnx_max_abs_diff": {
+    "restored": 2.9802322387695312e-06,
+    "weights": 1.1920928955078125e-07
+  },
+  "checkpoint": "/Users/ibraheenfarooq/Uni/GenAI/Ass1/outputs/task3/soft_mixture.pt",
+  "onnx": "/Users/ibraheenfarooq/Uni/GenAI/Ass1/outputs/task3/soft_mixture.onnx"
+}

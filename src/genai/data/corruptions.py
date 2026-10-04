@@ -120,10 +120,17 @@ def preprocess_image(image: Image.Image, size: int = IMAGE_SIZE) -> Image.Image:
     return converted.resize((size, size), Image.Resampling.BICUBIC)
 
 
-def sample_training_corruption(rng: random.Random, size: int = IMAGE_SIZE) -> CorruptionSpec:
-    """Draw one training condition. Call this again on every load."""
+def sample_training_corruption(
+    rng: random.Random,
+    size: int = IMAGE_SIZE,
+    corruption: str | None = None,
+) -> CorruptionSpec:
+    """Draw one training condition. Call this again on every load.
+
+    Pass ``corruption`` to force one class (used by Task 2 specialists).
+    """
     sample_seed = rng.randrange(1, 2**31)
-    return _sample_from_seed(sample_seed, size=size)
+    return _sample_from_seed(sample_seed, size=size, corruption=corruption)
 
 
 def build_val_manifest(val_ids: Sequence[str], size: int = IMAGE_SIZE) -> list[dict]:
@@ -194,9 +201,16 @@ def _test_condition_order() -> list[tuple[str, str | None]]:
     return order
 
 
-def _sample_from_seed(sample_seed: int, size: int) -> CorruptionSpec:
+def _sample_from_seed(
+    sample_seed: int,
+    size: int,
+    corruption: str | None = None,
+) -> CorruptionSpec:
     rng = random.Random(sample_seed)
-    corruption = rng.choice(CONDITIONS)
+    if corruption is None:
+        corruption = rng.choice(CONDITIONS)
+    elif corruption not in CONDITIONS:
+        raise ValueError(f"unknown corruption {corruption!r}")
     if corruption == "clean":
         return _clean_spec(sample_seed)
     if corruption == "salt_and_pepper":

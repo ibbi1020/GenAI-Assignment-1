@@ -1,0 +1,90 @@
+{
+  "checkpoint": "/Users/ibraheenfarooq/Uni/GenAI/Ass1/outputs/task1/task1_dae_b32_a05_gn_20ep.pt",
+  "params": {
+    "alpha": 0.5,
+    "bottleneck_dimension": 32,
+    "batch_size": 32,
+    "encoder_channels": 256,
+    "lr": 0.0005,
+    "norm": "group",
+    "train_seed": 42
+  },
+  "validation_vs_input": {
+    "clean": {
+      "restored": {
+        "l1": 0.021873453637171122,
+        "ssim": 0.931990200943417,
+        "psnr": 30.56347761154175,
+        "count": 180
+      },
+      "input": {
+        "l1": 0.0,
+        "ssim": 0.9999999708599514,
+        "psnr": 80.0,
+        "count": 180
+      },
+      "beats_input": {
+        "l1": false,
+        "ssim": false,
+        "psnr": false
+      }
+    },
+    "salt_and_pepper": {
+      "restored": {
+        "l1": 0.03839616139524991,
+        "ssim": 0.7592781783686471,
+        "psnr": 25.639024911467562,
+        "count": 194
+      },
+      "input": {
+        "l1": 0.04345391773301916,
+        "ssim": 0.3793350551853475,
+        "psnr": 16.032372243625602,
+        "count": 194
+      },
+      "beats_input": {
+        "l1": true,
+        "ssim": true,
+        "psnr": true
+      }
+    },
+    "gaussian_blur": {
+      "restored": {
+        "l1": 0.029398984132477872,
+        "ssim": 0.8529233395398318,
+        "psnr": 28.005889546740185,
+        "count": 182
+      },
+      "input": {
+        "l1": 0.026242911819481178,
+        "ssim": 0.8525698181692061,
+        "psnr": 28.437876460316417,
+        "count": 182
+      },
+      "beats_input": {
+        "l1": false,
+        "ssim": true,
+        "psnr": false
+      }
+    },
+    "rectangular_occlusion": {
+      "restored": {
+        "l1": 0.04781103580155306,
+        "ssim": 0.7874182571967443,
+        "psnr": 21.373027817408243,
+        "count": 180
+      },
+      "input": {
+        "l1": 0.09550267984159291,
+        "ssim": 0.7374452663792505,
+        "psnr": 13.397923443052504,
+        "count": 180
+      },
+      "beats_input": {
+        "l1": true,
+        "ssim": true,
+        "psnr": true
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+[
+  {
+    "corruption": "clean",
+    "severity": null,
+    "count": 3669,
+    "l1": 0.0009636384749500262,
+    "ssim": 0.9965317257177151,
+    "psnr": 78.52246542125087
+  },
+  {
+    "corruption": "salt_and_pepper",
+    "severity": "low",
+    "count": 3669,
+    "l1": 0.02913773279158872,
+    "ssim": 0.8751635039232836,
+    "psnr": 27.911058220560527
+  },
+  {
+    "corruption": "salt_and_pepper",
+    "severity": "medium",
+    "count": 3669,
+    "l1": 0.03195154459517004,
+    "ssim": 0.848761722027167,
+    "psnr": 27.180751254689177
+  },
+  {
+    "corruption": "salt_and_pepper",
+    "severity": "high",
+    "count": 3669,
+    "l1": 0.036461681813411834,
+    "ssim": 0.803053216295432,
+    "psnr": 26.080296252591957
+  },
+  {
+    "corruption": "gaussian_blur",
+    "severity": "low",
+    "count": 3669,
+    "l1": 0.028670498733473476,
+    "ssim": 0.8976448965059636,
+    "psnr": 28.30373337704858
+  },
+  {
+    "corruption": "gaussian_blur",
+    "severity": "medium",
+    "count": 3669,
+    "l1": 0.030321787067039942,
+    "ssim": 0.8645291302599872,
+    "psnr": 27.661070988203598
+  },
+  {
+    "corruption": "gaussian_blur",
+    "severity": "high",
+    "count": 3669,
+    "l1": 0.040226293208915714,
+    "ssim": 0.7455433742345013,
+    "psnr": 24.9075923315606
+  },
+  {
+    "corruption": "rectangular_occlusion",
+    "severity": "low",
+    "count": 3669,
+    "l1": 0.0373887414903488,
+    "ssim": 0.873041118399978,
+    "psnr": 23.46665560643593
+  },
+  {
+    "corruption": "rectangular_occlusion",
+    "severity": "medium",
+    "count": 3669,
+    "l1": 0.04901877586047261,
+    "ssim": 0.8085236348014789,
+    "psnr": 21.890765580795676
+  },
+  {
+    "corruption": "rectangular_occlusion",
+    "severity": "high",
+    "count": 3669,
+    "l1": 0.06643936035072781,
+    "ssim": 0.7182138827897184,
+    "psnr": 19.550360936694847
+  },
+  {
+    "corruption": "all",
+    "severity": null,
+    "count": 36690,
+    "l1": 0.035058005438609895,
+    "ssim": 0.8431006204955225,
+    "psnr": 30.547474996983176
+  }
+]

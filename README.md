@@ -39,3 +39,36 @@ MLFLOW_DISABLE_AGENT_HINT=1 uv run python scripts/compare_bottlenecks.py
 ```
 
 Checkpoints and ONNX weights land in `outputs/task1/` (gitignored). Metrics and figure grids land in `results/task1/`.
+
+## Task 3: Soft mixture
+
+Needs the Task 2 classifier and specialist checkpoints in `outputs/task2/`.
+
+```bash
+MLFLOW_DISABLE_AGENT_HINT=1 uv run python scripts/run_task3.py --workers 0
+```
+
+The run used for the report was shorter: `--warmup-epochs 2 --epochs 8 --patience 4`. The ONNX file is `outputs/task3/soft_mixture.onnx`. Metrics land in `results/task3/`.
+
+## Application
+
+One browser app, four workspaces. The React UI talks only to FastAPI.
+
+```bash
+docker compose up --build
+```
+
+Open http://127.0.0.1:5173. Put the ONNX files in `outputs/task1/`, `outputs/task2/`, and `outputs/task3/` before starting. Compose mounts that folder and `results/` into the API container.
+
+Without Docker, from this folder:
+
+```bash
+uv run --with fastapi --with 'uvicorn[standard]' --with python-multipart --with onnxruntime \
+  uvicorn app.backend.main:app --port 8000
+```
+
+In another terminal:
+
+```bash
+cd app/frontend && npm install && npm run dev
+```

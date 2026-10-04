@@ -1,6 +1,6 @@
-"""Train the same Task 1 autoencoder at two bottleneck sizes.
+"""Train the same Task 1 autoencoder at two other bottleneck sizes.
 
-Every other setting matches the 256 run. Validation chooses the checkpoint.
+Every other setting matches the 32 run. Validation chooses the checkpoint.
 The official test set is not loaded.
 """
 
@@ -27,16 +27,16 @@ from genai.training.task1 import (
     get_device,
 )
 
-# Same settings as the finished 256 run. Only the bottleneck changes.
+# Same settings as the main 32 run. Only the bottleneck changes.
 FIXED = {
-    "lr": 0.001,
+    "lr": 5e-4,
     "batch_size": 32,
-    "base_channels": 32,
-    "dropout": 0.1,
-    "alpha": 0.8,
+    "encoder_channels": 256,
+    "norm": "group",
+    "alpha": 0.5,
     "train_seed": 42,
 }
-DIMENSIONS = (512, 1024)
+DIMENSIONS = (16, 64)  # spatial bottleneck sizes; 32 is the main run
 EPOCHS = 25
 PATIENCE = 6
 
@@ -75,7 +75,7 @@ def main() -> None:
 
     for dimension in DIMENSIONS:
         params = dict(FIXED)
-        params["bottleneck_dim"] = dimension
+        params["bottleneck_dimension"] = dimension
         print(f"start bottleneck {dimension} params {params}", flush=True)
         seed_everything(42)
         model = build_model(params)
@@ -109,7 +109,7 @@ def main() -> None:
         )
         best_epoch = min(final["history"], key=lambda row: row["objective"])["epoch"]
         run = {
-            "bottleneck_dim": dimension,
+            "bottleneck_dimension": dimension,
             "params": params,
             "best_objective": final["best_objective"],
             "best_epoch": best_epoch,
@@ -137,7 +137,7 @@ def main() -> None:
     if reference_score is not None:
         print(f"256 reference validation score {reference_score:.4f}", flush=True)
     for run in runs:
-        print(f"{run['bottleneck_dim']} validation score {run['best_objective']:.4f}", flush=True)
+        print(f"{run['bottleneck_dimension']} validation score {run['best_objective']:.4f}", flush=True)
 
 
 if __name__ == "__main__":

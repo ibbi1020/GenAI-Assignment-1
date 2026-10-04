@@ -1,0 +1,365 @@
+{
+  "device": "mps",
+  "identity": [
+    {
+      "corruption": "clean",
+      "severity": null,
+      "count": 3669,
+      "l1": 0.0,
+      "ssim": 0.9999979104583743,
+      "psnr": 80.0
+    },
+    {
+      "corruption": "salt_and_pepper",
+      "severity": "low",
+      "count": 3669,
+      "l1": 0.015023309891268257,
+      "ssim": 0.6256458152458173,
+      "psnr": 20.129878826770383
+    },
+    {
+      "corruption": "salt_and_pepper",
+      "severity": "medium",
+      "count": 3669,
+      "l1": 0.03999610702334844,
+      "ssim": 0.3722109001715718,
+      "psnr": 15.87344868925879
+    },
+    {
+      "corruption": "salt_and_pepper",
+      "severity": "high",
+      "count": 3669,
+      "l1": 0.07498432523866673,
+      "ssim": 0.23677320385838635,
+      "psnr": 13.142549320084745
+    },
+    {
+      "corruption": "gaussian_blur",
+      "severity": "low",
+      "count": 3669,
+      "l1": 0.015689215166763314,
+      "ssim": 0.9475895862515663,
+      "psnr": 32.324208252564475
+    },
+    {
+      "corruption": "gaussian_blur",
+      "severity": "medium",
+      "count": 3669,
+      "l1": 0.03008745683501298,
+      "ssim": 0.8212014929284579,
+      "psnr": 26.77030191086202
+    },
+    {
+      "corruption": "gaussian_blur",
+      "severity": "high",
+      "count": 3669,
+      "l1": 0.04037800703134767,
+      "ssim": 0.7171962757336733,
+      "psnr": 24.351426377482294
+    },
+    {
+      "corruption": "rectangular_occlusion",
+      "severity": "low",
+      "count": 3669,
+      "l1": 0.04485703951507879,
+      "ssim": 0.8790623563029325,
+      "psnr": 16.63161250634556
+    },
+    {
+      "corruption": "rectangular_occlusion",
+      "severity": "medium",
+      "count": 3669,
+      "l1": 0.08872432116892226,
+      "ssim": 0.7605507809513432,
+      "psnr": 13.283040749276163
+    },
+    {
+      "corruption": "rectangular_occlusion",
+      "severity": "high",
+      "count": 3669,
+      "l1": 0.15577249786072545,
+      "ssim": 0.5907943785824156,
+      "psnr": 10.722757288661695
+    },
+    {
+      "corruption": "all",
+      "severity": null,
+      "count": 36690,
+      "l1": 0.05055122797311339,
+      "ssim": 0.6951022700484538,
+      "psnr": 25.322922392130614
+    }
+  ],
+  "universal": [
+    {
+      "corruption": "clean",
+      "severity": null,
+      "count": 3669,
+      "l1": 0.02334377772595381,
+      "ssim": 0.9268733687022623,
+      "psnr": 30.112302400137235
+    },
+    {
+      "corruption": "salt_and_pepper",
+      "severity": "low",
+      "count": 3669,
+      "l1": 0.03125733099233092,
+      "ssim": 0.8258168843891355,
+      "psnr": 27.200972355104135
+    },
+    {
+      "corruption": "salt_and_pepper",
+      "severity": "medium",
+      "count": 3669,
+      "l1": 0.03922662777614491,
+      "ssim": 0.7596578204069712,
+      "psnr": 25.395769324085634
+    },
+    {
+      "corruption": "salt_and_pepper",
+      "severity": "high",
+      "count": 3669,
+      "l1": 0.0468725497347274,
+      "ssim": 0.7018183139745531,
+      "psnr": 23.94419152797097
+    },
+    {
+      "corruption": "gaussian_blur",
+      "severity": "low",
+      "count": 3669,
+      "l1": 0.0240427706894229,
+      "ssim": 0.9156791747314919,
+      "psnr": 29.82083503034856
+    },
+    {
+      "corruption": "gaussian_blur",
+      "severity": "medium",
+      "count": 3669,
+      "l1": 0.031112498595384622,
+      "ssim": 0.8361069710808965,
+      "psnr": 27.19457911379365
+    },
+    {
+      "corruption": "gaussian_blur",
+      "severity": "high",
+      "count": 3669,
+      "l1": 0.0404749427556293,
+      "ssim": 0.7308226770684062,
+      "psnr": 24.72280448670282
+    },
+    {
+      "corruption": "rectangular_occlusion",
+      "severity": "low",
+      "count": 3669,
+      "l1": 0.03405878844278268,
+      "ssim": 0.8634439238201665,
+      "psnr": 24.28163089138768
+    },
+    {
+      "corruption": "rectangular_occlusion",
+      "severity": "medium",
+      "count": 3669,
+      "l1": 0.045375412011213964,
+      "ssim": 0.799401547180011,
+      "psnr": 21.649693644511405
+    },
+    {
+      "corruption": "rectangular_occlusion",
+      "severity": "high",
+      "count": 3669,
+      "l1": 0.0649792297747576,
+      "ssim": 0.7030599078371143,
+      "psnr": 18.98939695875532
+    },
+    {
+      "corruption": "all",
+      "severity": null,
+      "count": 36690,
+      "l1": 0.03807439284983481,
+      "ssim": 0.8062680589191008,
+      "psnr": 25.33121757327974
+    }
+  ],
+  "oracle": [
+    {
+      "corruption": "clean",
+      "severity": null,
+      "count": 3669,
+      "l1": 0.0,
+      "ssim": 0.9999979104583743,
+      "psnr": 80.0
+    },
+    {
+      "corruption": "salt_and_pepper",
+      "severity": "low",
+      "count": 3669,
+      "l1": 0.029255815364093475,
+      "ssim": 0.8751221886932704,
+      "psnr": 27.916083774894158
+    },
+    {
+      "corruption": "salt_and_pepper",
+      "severity": "medium",
+      "count": 3669,
+      "l1": 0.03195154459517004,
+      "ssim": 0.848761722027167,
+      "psnr": 27.180751254689177
+    },
+    {
+      "corruption": "salt_and_pepper",
+      "severity": "high",
+      "count": 3669,
+      "l1": 0.036461681813411834,
+      "ssim": 0.803053216295432,
+      "psnr": 26.080296252591957
+    },
+    {
+      "corruption": "gaussian_blur",
+      "severity": "low",
+      "count": 3669,
+      "l1": 0.028700095197273703,
+      "ssim": 0.8974988734926831,
+      "psnr": 28.298355920791106
+    },
+    {
+      "corruption": "gaussian_blur",
+      "severity": "medium",
+      "count": 3669,
+      "l1": 0.030321787067039942,
+      "ssim": 0.8645291302599872,
+      "psnr": 27.661070988203598
+    },
+    {
+      "corruption": "gaussian_blur",
+      "severity": "high",
+      "count": 3669,
+      "l1": 0.040226293208915714,
+      "ssim": 0.7455433742345013,
+      "psnr": 24.9075923315606
+    },
+    {
+      "corruption": "rectangular_occlusion",
+      "severity": "low",
+      "count": 3669,
+      "l1": 0.03928404518840471,
+      "ssim": 0.8677204524375789,
+      "psnr": 24.17844183057035
+    },
+    {
+      "corruption": "rectangular_occlusion",
+      "severity": "medium",
+      "count": 3669,
+      "l1": 0.04903609509094758,
+      "ssim": 0.8085809172044564,
+      "psnr": 21.909755858844747
+    },
+    {
+      "corruption": "rectangular_occlusion",
+      "severity": "high",
+      "count": 3669,
+      "l1": 0.06643936035072781,
+      "ssim": 0.7182138827897184,
+      "psnr": 19.550360936694847
+    },
+    {
+      "corruption": "all",
+      "severity": null,
+      "count": 36690,
+      "l1": 0.03516767178759848,
+      "ssim": 0.8429021667893168,
+      "psnr": 30.768270914884056
+    }
+  ],
+  "predicted": [
+    {
+      "corruption": "clean",
+      "severity": null,
+      "count": 3669,
+      "l1": 0.0009636384749500262,
+      "ssim": 0.9965317257177151,
+      "psnr": 78.52246542125087
+    },
+    {
+      "corruption": "salt_and_pepper",
+      "severity": "low",
+      "count": 3669,
+      "l1": 0.02913773279158872,
+      "ssim": 0.8751635039232836,
+      "psnr": 27.911058220560527
+    },
+    {
+      "corruption": "salt_and_pepper",
+      "severity": "medium",
+      "count": 3669,
+      "l1": 0.03195154459517004,
+      "ssim": 0.848761722027167,
+      "psnr": 27.180751254689177
+    },
+    {
+      "corruption": "salt_and_pepper",
+      "severity": "high",
+      "count": 3669,
+      "l1": 0.036461681813411834,
+      "ssim": 0.803053216295432,
+      "psnr": 26.080296252591957
+    },
+    {
+      "corruption": "gaussian_blur",
+      "severity": "low",
+      "count": 3669,
+      "l1": 0.028670498733473476,
+      "ssim": 0.8976448965059636,
+      "psnr": 28.30373337704858
+    },
+    {
+      "corruption": "gaussian_blur",
+      "severity": "medium",
+      "count": 3669,
+      "l1": 0.030321787067039942,
+      "ssim": 0.8645291302599872,
+      "psnr": 27.661070988203598
+    },
+    {
+      "corruption": "gaussian_blur",
+      "severity": "high",
+      "count": 3669,
+      "l1": 0.040226293208915714,
+      "ssim": 0.7455433742345013,
+      "psnr": 24.9075923315606
+    },
+    {
+      "corruption": "rectangular_occlusion",
+      "severity": "low",
+      "count": 3669,
+      "l1": 0.0373887414903488,
+      "ssim": 0.873041118399978,
+      "psnr": 23.46665560643593
+    },
+    {
+      "corruption": "rectangular_occlusion",
+      "severity": "medium",
+      "count": 3669,
+      "l1": 0.04901877586047261,
+      "ssim": 0.8085236348014789,
+      "psnr": 21.890765580795676
+    },
+    {
+      "corruption": "rectangular_occlusion",
+      "severity": "high",
+      "count": 3669,
+      "l1": 0.06643936035072781,
+      "ssim": 0.7182138827897184,
+      "psnr": 19.550360936694847
+    },
+    {
+      "corruption": "all",
+      "severity": null,
+      "count": 36690,
+      "l1": 0.035058005438609895,
+      "ssim": 0.8431006204955225,
+      "psnr": 30.547474996983176
+    }
+  ],
+  "n_routing_failures_saved": 8,
+  "misroute_rate": 0.02237666939220496
+}

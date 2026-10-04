@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Fraunces", "Iowan Old Style", serif;
+  --font-body: "Figtree", "Avenir Next", sans-serif;
+  --color-ink: #1a1612;
+  --color-paper: #f3eadb;
+  --color-paper-2: #e7dccb;
+  --color-soot: #100e0c;
+  --color-rebate: #221c17;
+  --color-brass: #b8884a;
+  --color-safelight: #d4532b;
+  --color-mist: #8c8174;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-soot);
+  color: var(--color-paper);
+  font-family: var(--font-body);
+}
+
+body::before {
+  content: "";
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  opacity: 0.18;
+  background-image: radial-gradient(rgba(243, 234, 219, 0.16) 0.6px, transparent 0.6px);
+  background-size: 3px 3px;
+  mix-blend-mode: overlay;
+}
+
+button,
+input,
+select {
+  font-family: inherit;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.rise {
+  animation: rise 0.7s ease both;
+}

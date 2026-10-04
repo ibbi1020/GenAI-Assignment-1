@@ -67,7 +67,7 @@ def main() -> None:
     best_params["train_seed"] = 42
     model = build_model(best_params)
     loaders = make_loaders(best_params, num_workers=args.workers, include_test=False)
-    checkpoint = output_dir / "universal_autoencoder.pt"
+    checkpoint = output_dir / "denoising_autoencoder.pt"
     with mlflow.start_run(run_name="final"):
         mlflow.log_params(best_params)
         mlflow.log_param("final_epochs", args.final_epochs)
@@ -114,7 +114,7 @@ def main() -> None:
     (results_dir / "failure_cases.json").write_text(json.dumps(failures, indent=2) + "\n")
 
     sample = next(iter(test_loader))["corrupted"][:4]
-    max_abs = export_onnx(model, best_params, output_dir / "universal_autoencoder.onnx", sample)
+    max_abs = export_onnx(model, best_params, output_dir / "denoising_autoencoder.onnx", sample)
     report = {
         "device": str(device),
         "search_space": SEARCH_SPACE,
@@ -128,7 +128,7 @@ def main() -> None:
         "test_summary": summary,
         "onnx_max_abs_diff": max_abs,
         "checkpoint": str(checkpoint),
-        "onnx": str(output_dir / "universal_autoencoder.onnx"),
+        "onnx": str(output_dir / "denoising_autoencoder.onnx"),
     }
     (results_dir / "run_summary.json").write_text(json.dumps(report, indent=2) + "\n")
     print(json.dumps({"test": summary, "onnx_max_abs_diff": max_abs}, indent=2))

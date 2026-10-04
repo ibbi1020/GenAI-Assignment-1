@@ -1,0 +1,11 @@
+corruption,severity,count,clean,salt_and_pepper,gaussian_blur,rectangular_occlusion
+clean,,3669,0.868006,0.001936,0.083024,0.047034
+salt_and_pepper,low,3669,0.061410,0.932056,0.000001,0.006533
+salt_and_pepper,medium,3669,0.010098,0.988496,0.000019,0.001387
+salt_and_pepper,high,3669,0.006168,0.992756,0.000054,0.001022
+gaussian_blur,low,3669,0.292160,0.000164,0.691831,0.015845
+gaussian_blur,medium,3669,0.255193,0.000120,0.732459,0.012227
+gaussian_blur,high,3669,0.263866,0.000144,0.722912,0.013078
+rectangular_occlusion,low,3669,0.338807,0.007551,0.024306,0.629335
+rectangular_occlusion,medium,3669,0.056523,0.004219,0.004277,0.934981
+rectangular_occlusion,high,3669,0.004894,0.001010,0.000780,0.993315

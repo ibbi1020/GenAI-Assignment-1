@@ -5,24 +5,23 @@ import torch
 from PIL import Image
 
 from genai.data.pet_dataset import ManifestPetDataset, TrainPetDataset, pil_to_tensor
-from genai.models.universal_autoencoder import UniversalAutoencoder
+from genai.models.denoising_autoencoder import DenoisingAutoencoder
 from genai.training.losses import reconstruction_loss, structural_similarity, validation_objective
 
 
-def test_autoencoder_bottleneck_is_smaller_than_the_encoder_map():
-    model = UniversalAutoencoder(base_channels=8, bottleneck_dim=16, dropout=0.0)
+def test_autoencoder_shrinks_to_the_bottleneck_size_and_rebuilds_the_image():
+    model = DenoisingAutoencoder(encoder_channels=8, bottleneck_dimension=32, norm="group")
     model.eval()
-    image = torch.rand(2, 3, 128, 128)
+    hidden = torch.rand(2, 3, 128, 128)
+    smallest = 128
     with torch.no_grad():
-        latent = model.encode(image)
-        restored = model(image)
-        decoded = model.decode(latent)
-    assert latent.shape == (2, 16)
-    assert model.to_latent.in_features > model.to_latent.out_features
-    assert restored.shape == (2, 3, 128, 128)
-    assert torch.allclose(restored, decoded)
-    assert restored.min() >= 0
-    assert restored.max() <= 1
+        for layer in model.dae_e2e:
+            hidden = layer(hidden)
+            smallest = min(smallest, hidden.shape[-1])
+    assert smallest == 32
+    assert hidden.shape == (2, 3, 128, 128)
+    assert hidden.min() >= 0
+    assert hidden.max() <= 1
 
 
 def test_reconstruction_loss_is_zero_for_a_perfect_copy_and_follows_alpha():

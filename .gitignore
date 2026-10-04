@@ -26,3 +26,12 @@ report/build/
 *.log
 *.out
 *.synctex.gz
+*.fls
+*.fdb_latexmk
+*.xdv
+
+# Local training logs, frontend installs, and build output.
+logs/
+node_modules/
+app/frontend/dist/
+dist/
