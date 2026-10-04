@@ -1,0 +1,84 @@
+{
+  "reference_bottleneck_256_validation_objective": 0.5952760282418003,
+  "lower_is_better": true,
+  "fixed_settings": {
+    "lr": 0.001,
+    "batch_size": 32,
+    "base_channels": 32,
+    "dropout": 0.1,
+    "alpha": 0.8,
+    "train_seed": 42
+  },
+  "runs": [
+    {
+      "bottleneck_dim": 512,
+      "params": {
+        "lr": 0.001,
+        "batch_size": 32,
+        "base_channels": 32,
+        "dropout": 0.1,
+        "alpha": 0.8,
+        "train_seed": 42,
+        "bottleneck_dim": 512
+      },
+      "best_objective": 0.5852465104797612,
+      "best_epoch": 23,
+      "epochs_ran": 25,
+      "val_metrics": [
+        {
+          "corruption": "clean",
+          "severity": null,
+          "count": 180,
+          "l1": 0.0864637764584687,
+          "ssim": 0.5216072266300519,
+          "psnr": 18.916821336746217
+        },
+        {
+          "corruption": "all",
+          "severity": null,
+          "count": 736,
+          "l1": 0.09022585367885134,
+          "ssim": 0.5049793466561191,
+          "psnr": 18.52130097280378
+        }
+      ],
+      "checkpoint": "/Users/ibraheenfarooq/Uni/GenAI/Ass1/outputs/task1/bottleneck_512.pt",
+      "preview": "/Users/ibraheenfarooq/Uni/GenAI/Ass1/results/task1/bottleneck_512_val.png"
+    },
+    {
+      "bottleneck_dim": 1024,
+      "params": {
+        "lr": 0.001,
+        "batch_size": 32,
+        "base_channels": 32,
+        "dropout": 0.1,
+        "alpha": 0.8,
+        "train_seed": 42,
+        "bottleneck_dim": 1024
+      },
+      "best_objective": 0.5722425868329795,
+      "best_epoch": 25,
+      "epochs_ran": 25,
+      "val_metrics": [
+        {
+          "corruption": "clean",
+          "severity": null,
+          "count": 180,
+          "l1": 0.08308087003727754,
+          "ssim": 0.5340084451768133,
+          "psnr": 19.288083044687905
+        },
+        {
+          "corruption": "all",
+          "severity": null,
+          "count": 736,
+          "l1": 0.08738569089758169,
+          "ssim": 0.5151431034926487,
+          "psnr": 18.853741846654724
+        }
+      ],
+      "checkpoint": "/Users/ibraheenfarooq/Uni/GenAI/Ass1/outputs/task1/bottleneck_1024.pt",
+      "preview": "/Users/ibraheenfarooq/Uni/GenAI/Ass1/results/task1/bottleneck_1024_val.png"
+    }
+  ]
+}

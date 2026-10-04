@@ -1,0 +1,24 @@
+{
+  "dataset": "oxford-iiit-pet",
+  "source": "https://www.robots.ox.ac.uk/~vgg/data/pets/",
+  "archives": {
+    "images.tar.gz": {
+      "url": "https://www.robots.ox.ac.uk/~vgg/data/pets/data/images.tar.gz",
+      "md5": "5c4f3ee8e5d25df40f4fd59a7f44e54c"
+    },
+    "annotations.tar.gz": {
+      "url": "https://www.robots.ox.ac.uk/~vgg/data/pets/data/annotations.tar.gz",
+      "md5": "95a8c909bbe2e81eed6a22bccdf3f68f"
+    }
+  },
+  "split_rule": "Shuffle official trainval.txt order with random.Random(42). Validation size is round(0.2 * N). Returned id files are sorted. Test membership is the official test.txt list.",
+  "image_rule": "RGB, 128x128, PIL bicubic stretch, saved as PNG.",
+  "counts": {
+    "official_trainval": 3680,
+    "train": 2944,
+    "val": 736,
+    "test": 3669,
+    "val_manifest_rows": 736,
+    "test_manifest_rows": 36690
+  }
+}

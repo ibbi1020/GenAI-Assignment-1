@@ -1,0 +1,34 @@
+[
+  {
+    "image_id": "Maine_Coon_264",
+    "corruption": "clean",
+    "severity": null,
+    "l1": 0.24826304614543915,
+    "ssim": 0.4081619083881378,
+    "psnr": 9.771193504333496
+  },
+  {
+    "image_id": "Egyptian_Mau_6",
+    "corruption": "salt_and_pepper",
+    "severity": "high",
+    "l1": 0.2509523928165436,
+    "ssim": 0.3473621904850006,
+    "psnr": 9.956807136535645
+  },
+  {
+    "image_id": "Maine_Coon_264",
+    "corruption": "gaussian_blur",
+    "severity": "low",
+    "l1": 0.2483702450990677,
+    "ssim": 0.4077965319156647,
+    "psnr": 9.770890235900879
+  },
+  {
+    "image_id": "Maine_Coon_264",
+    "corruption": "rectangular_occlusion",
+    "severity": "medium",
+    "l1": 0.2587890923023224,
+    "ssim": 0.35887980461120605,
+    "psnr": 9.6424560546875
+  }
+]

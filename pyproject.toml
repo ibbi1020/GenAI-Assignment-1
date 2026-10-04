@@ -1,0 +1,21 @@
+[project]
+name = "genai-assignment-1"
+version = "0.1.0"
+description = "Generative AI assignment 1: image restoration and face-to-sketch generation."
+requires-python = ">=3.11"
+dependencies = [
+    "gdown>=5.2",
+    "matplotlib>=3.11.2",
+    "mlflow>=3.16.1",
+    "numpy>=2.0",
+    "onnx>=1.23.1",
+    "onnxruntime>=1.30.0",
+    "optuna>=5.0.0",
+    "pillow>=10.4",
+    "pytest>=8.0",
+    "torch>=2.14.1",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

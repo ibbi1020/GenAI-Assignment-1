@@ -1,0 +1,98 @@
+[
+  {
+    "image_id": "american_bulldog_51",
+    "corruption": "clean",
+    "severity": null,
+    "l1": 0.07316937297582626,
+    "ssim": 0.45608702301979065,
+    "psnr": 18.871549606323242
+  },
+  {
+    "image_id": "Russian_Blue_228",
+    "corruption": "clean",
+    "severity": null,
+    "l1": 0.0877702459692955,
+    "ssim": 0.4896787703037262,
+    "psnr": 18.770275115966797
+  },
+  {
+    "image_id": "Sphynx_248",
+    "corruption": "clean",
+    "severity": null,
+    "l1": 0.10465681552886963,
+    "ssim": 0.5179281830787659,
+    "psnr": 16.469789505004883
+  },
+  {
+    "image_id": "staffordshire_bull_terrier_40",
+    "corruption": "salt_and_pepper",
+    "severity": "low",
+    "l1": 0.074034683406353,
+    "ssim": 0.49602100253105164,
+    "psnr": 19.789417266845703
+  },
+  {
+    "image_id": "Egyptian_Mau_27",
+    "corruption": "salt_and_pepper",
+    "severity": "low",
+    "l1": 0.08862770348787308,
+    "ssim": 0.45615696907043457,
+    "psnr": 18.429473876953125
+  },
+  {
+    "image_id": "english_cocker_spaniel_29",
+    "corruption": "salt_and_pepper",
+    "severity": "medium",
+    "l1": 0.10544779151678085,
+    "ssim": 0.25227150321006775,
+    "psnr": 17.191675186157227
+  },
+  {
+    "image_id": "keeshond_77",
+    "corruption": "gaussian_blur",
+    "severity": "high",
+    "l1": 0.07268636673688889,
+    "ssim": 0.559444010257721,
+    "psnr": 20.16665267944336
+  },
+  {
+    "image_id": "havanese_56",
+    "corruption": "gaussian_blur",
+    "severity": "high",
+    "l1": 0.08726302534341812,
+    "ssim": 0.38334670662879944,
+    "psnr": 19.02251434326172
+  },
+  {
+    "image_id": "american_bulldog_46",
+    "corruption": "gaussian_blur",
+    "severity": "low",
+    "l1": 0.10413482785224915,
+    "ssim": 0.5236604809761047,
+    "psnr": 16.69060707092285
+  },
+  {
+    "image_id": "Egyptian_Mau_62",
+    "corruption": "rectangular_occlusion",
+    "severity": "low",
+    "l1": 0.08427584171295166,
+    "ssim": 0.5030854344367981,
+    "psnr": 19.515424728393555
+  },
+  {
+    "image_id": "Russian_Blue_92",
+    "corruption": "rectangular_occlusion",
+    "severity": "high",
+    "l1": 0.10039475560188293,
+    "ssim": 0.5680244565010071,
+    "psnr": 17.518150329589844
+  },
+  {
+    "image_id": "miniature_pinscher_48",
+    "corruption": "rectangular_occlusion",
+    "severity": "medium",
+    "l1": 0.11875108629465103,
+    "ssim": 0.32238665223121643,
+    "psnr": 15.862276077270508
+  }
+]

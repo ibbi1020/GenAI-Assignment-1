@@ -1,0 +1,132 @@
+[
+  {
+    "number": 0,
+    "state": "COMPLETE",
+    "value": 0.7043569664592327,
+    "params": {
+      "lr": 0.001,
+      "batch_size": 32,
+      "bottleneck_dim": 256,
+      "base_channels": 32,
+      "dropout": 0.1,
+      "alpha": 0.8
+    }
+  },
+  {
+    "number": 1,
+    "state": "COMPLETE",
+    "value": 0.7265482977356599,
+    "params": {
+      "lr": 0.0003071057367777374,
+      "batch_size": 16,
+      "bottleneck_dim": 512,
+      "base_channels": 32,
+      "dropout": 0.29097295564859826,
+      "alpha": 0.8745991883601898
+    }
+  },
+  {
+    "number": 2,
+    "state": "COMPLETE",
+    "value": 0.8858032459798066,
+    "params": {
+      "lr": 0.00018891200276189413,
+      "batch_size": 64,
+      "bottleneck_dim": 512,
+      "base_channels": 64,
+      "dropout": 0.13682099526511077,
+      "alpha": 0.8533291826268561
+    }
+  },
+  {
+    "number": 3,
+    "state": "PRUNED",
+    "value": 0.8963786583879719,
+    "params": {
+      "lr": 0.00018187859051288225,
+      "batch_size": 32,
+      "bottleneck_dim": 512,
+      "base_channels": 16,
+      "dropout": 0.029301634201915158,
+      "alpha": 0.8079048619304706
+    }
+  },
+  {
+    "number": 4,
+    "state": "PRUNED",
+    "value": 0.7602608200648557,
+    "params": {
+      "lr": 0.0003738105868191798,
+      "batch_size": 32,
+      "bottleneck_dim": 64,
+      "base_channels": 32,
+      "dropout": 0.29087538832936755,
+      "alpha": 0.8488097705125015
+    }
+  },
+  {
+    "number": 5,
+    "state": "PRUNED",
+    "value": 0.8782993924358617,
+    "params": {
+      "lr": 0.0016684619386293468,
+      "batch_size": 64,
+      "bottleneck_dim": 512,
+      "base_channels": 64,
+      "dropout": 0.10702599800807679,
+      "alpha": 0.6264205293593214
+    }
+  },
+  {
+    "number": 6,
+    "state": "PRUNED",
+    "value": 0.8862697112819422,
+    "params": {
+      "lr": 0.0005082341959721457,
+      "batch_size": 32,
+      "bottleneck_dim": 64,
+      "base_channels": 16,
+      "dropout": 0.2313811040057837,
+      "alpha": 0.5333200932803407
+    }
+  },
+  {
+    "number": 7,
+    "state": "PRUNED",
+    "value": 0.8854460508927056,
+    "params": {
+      "lr": 0.00029266761285490743,
+      "batch_size": 32,
+      "bottleneck_dim": 64,
+      "base_channels": 64,
+      "dropout": 0.14166447754858477,
+      "alpha": 0.5538174106722358
+    }
+  },
+  {
+    "number": 8,
+    "state": "PRUNED",
+    "value": 0.8267962070910827,
+    "params": {
+      "lr": 0.0008471354625326559,
+      "batch_size": 64,
+      "bottleneck_dim": 128,
+      "base_channels": 64,
+      "dropout": 0.094306794322898,
+      "alpha": 0.7288568110241163
+    }
+  },
+  {
+    "number": 9,
+    "state": "PRUNED",
+    "value": 0.7476462158172027,
+    "params": {
+      "lr": 0.0015162513677579245,
+      "batch_size": 64,
+      "bottleneck_dim": 256,
+      "base_channels": 16,
+      "dropout": 0.2614381770563153,
+      "alpha": 0.8616524346046015
+    }
+  }
+]

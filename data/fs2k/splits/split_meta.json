@@ -1,0 +1,39 @@
+{
+  "dataset": "FS2K",
+  "source": "https://github.com/DengPingFan/FS2K",
+  "download": "https://drive.google.com/file/d/1saIMhQ3dc5_ftkfGmBPbCluRn_zy7QQp/view",
+  "split_rule": "Official anno_test.json is the test set. From anno_train.json only, hold out round(0.15 * n) per style. Styles are visited in order 0, 1, 2. Within a style, records are sorted by image_name and shuffled with random.Random(42).",
+  "style_names": {
+    "0": "Style 1",
+    "1": "Style 2",
+    "2": "Style 3"
+  },
+  "image_rule": "Photo and sketch converted to RGB and stretched to 128x128 with PIL bicubic.",
+  "counts": {
+    "official_train": 1058,
+    "official_test": 1046,
+    "train": 899,
+    "val": 159,
+    "test": 1046,
+    "official_train_styles": {
+      "0": 357,
+      "1": 350,
+      "2": 351
+    },
+    "train_styles": {
+      "0": 303,
+      "1": 298,
+      "2": 298
+    },
+    "val_styles": {
+      "0": 54,
+      "1": 52,
+      "2": 53
+    },
+    "test_styles": {
+      "0": 619,
+      "1": 381,
+      "2": 46
+    }
+  }
+}
